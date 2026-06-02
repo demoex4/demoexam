@@ -443,13 +443,6 @@ systemctl enable --now nfs-server
 ### HQ-CLI
 
 ```bash
-apt-get update && apt-get install nfs-clients nfs-utils chrony yandex-browser -y
-
-su -
-toor
-vim /etc/net/sysctl.conf
-# меняем 0 на 1
-
 apt-get update && apt-get install nfs-clients nfs-utils -y
 
 mkdir /mnt/nfs
