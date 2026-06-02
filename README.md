@@ -522,6 +522,7 @@ HQ-SRV ansible_host=192.168.0.10 ansible_user=sshuser ansible_password=P@ssw0rd 
 HQ-CLI ansible_host=192.168.0.72 ansible_user=user ansible_password=P@ssw0rd
 HQ-RTR ansible_host=192.168.0.1 ansible_user=net_admin ansible_password=P@ssw0rd ansible_connection=network_cli ansible_network_os=ios
 BR-RTR ansible_host=192.168.10.1 ansible_user=net_admin ansible_password=P@ssw0rd ansible_connection=network_cli ansible_network_os=ios
+
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
 
