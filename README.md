@@ -410,7 +410,7 @@ sudo id | sudo cat /etc/hosts | sudo grep '127.0.0.1' /etc/hosts | sudo su --
 
 ```bash
 lsblk
-mdadm --create /dev/md0 --level 0 --raid-devices 2 /dev/sdb /dev/sdc
+mdadm --create /dev/md0 -l 0 -n 2 /dev/sdb /dev/sdc
 mkfs.ext4 /dev/md0
 
 vim /etc/fstab
