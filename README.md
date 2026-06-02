@@ -3,6 +3,9 @@
 ### ISP 
 
 ```bash
+#зеркало менять в файле /etc/apt/source.list.d/alt.list
+#комментируем 3 строчки
+#в /etc/apt/source.list.d/yandex.list раскоменчиваем 3 строчки по середине
 hostnamectl hostname ISP.au-team.irpo; exec bash
 
 cd /etc/net/ifaces
