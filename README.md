@@ -1,11 +1,17 @@
 ## Модуль 1 (меняйте ip адреса на нужные)
 
 ### ISP 
-
-```bash
 зеркало менять в файле /etc/apt/source.list.d/alt.list
-#комментируем 3 строчки
-#в /etc/apt/source.list.d/yandex.list раскоменчиваем 3 строчки по середине
+комментируем 3 строчки
+в /etc/apt/source.list.d/yandex.list раскоменчиваем 3 строчки по середине
+маски:
+8 адресов - 29 маска
+16 адресов - 28 маска
+32 адреса - 27 маска
+64 адреса - 26 маска
+128 адресов - 25 маска
+256 адресов - 24 маска 
+```bash
 hostnamectl hostname ISP.au-team.irpo; exec bash
 
 cd /etc/net/ifaces
