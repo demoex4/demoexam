@@ -678,7 +678,7 @@ nginx -t
 systemctl restart nginx
 systemctl enable --now nginx
 ```
-### BR-RTR
+### HQ-CLI
 
 ```bash
 vim /etc/hosts
