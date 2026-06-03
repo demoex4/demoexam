@@ -15,6 +15,11 @@
 ```bash
 hostnamectl hostname ISP.au-team.irpo; exec bash
 
+vim /etc/sysconfig/network
+
+#/etc/sysconfig/network
+hostname ISP.au-team.irpo
+
 cd /etc/net/ifaces
 mkdir ens18 ens19 ens20
 
@@ -105,6 +110,7 @@ exit
 
 interface tunnel.1
 ip address 10.0.0.1/30
+ip mtu 1400
 ip tunnel 172.16.1.2 172.16.2.2 mode gre
 ip ospf authentication
 ip ospf authentication-key P@ssw0rd
@@ -180,6 +186,7 @@ exit
 
 interface tunnel.1
 ip address 10.0.0.2/30
+ip mtu 1400
 ip tunnel 172.16.2.2 172.16.1.2 mode gre
 ip ospf authentication
 ip ospf authentication-key P@ssw0rd
@@ -204,6 +211,11 @@ write memory
 
 ```bash
 hostnamectl hostname BR-SRV.au-team.irpo; exec bash
+
+vim /etc/sysconfig/network
+
+#/etc/sysconfig/network
+hostname BR-SRV.au-team.irpo
 
 vim /etc/net/ifaces/ens18/options
 
@@ -248,6 +260,11 @@ systemctl restart sshd
 
 ```bash
 hostnamectl hostname HQ-SRV.au-team.irpo; exec bash
+
+vim /etc/sysconfig/network
+
+#/etc/sysconfig/network
+hostname HQ-SRV.au-team.irpo
 
 vim /etc/net/ifaces/ens18/options
 
@@ -351,6 +368,11 @@ systemctl enable --now bind
 su -
 toor
 hostnamectl hostname HQ-CLI.au-team.irpo; exec bash
+
+vim /etc/sysconfig/network
+
+#/etc/sysconfig/network
+hostname HQ-SRV.au-team.irpo
 
 vim /etc/net/sysctl.conf
 # меняем 0 на 1
@@ -710,4 +732,11 @@ nginx -t
 systemctl restart nginx
 
 # Проверка: в браузере HQ-CLI http://web.au-team.irpo → ввести WEB / P@ssw0rd
+```
+### 11. Yandex браузер
+
+### HQ-CLI
+
+```bash
+apt-get update && apt-get install yandex-browser -y
 ```
