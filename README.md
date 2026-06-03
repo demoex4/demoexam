@@ -241,7 +241,8 @@ systemctl restart network
 
 # меняйте имя и пароль на свои
 useradd sshuser -u 2026 
-passwd sshuser P@ssw0rd
+passwd sshuser
+P@ssw0rd
 usermod -aG wheel sshuser
 echo "sshuser ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
@@ -289,7 +290,8 @@ systemctl restart network
 
 # меняйте имя и пароль на свои
 useradd sshuser -u 2026
-passwd sshuser  # P@ssw0rd
+passwd sshuser
+P@ssw0rd
 usermod -aG wheel sshuser
 echo "sshuser ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
